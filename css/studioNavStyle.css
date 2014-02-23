@@ -1,0 +1,362 @@
+@font-face {
+    font-family:"Novecentosans-Light";
+    src: url('../webfonts/2974BE_0_0.eot');
+    src: url('../webfonts/2974BE_0_0.eot?#iefix') format('embedded-opentype'), url('../webfonts/2974BE_0_0.woff') format('woff'), url('../webfonts/2974BE_0_0.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* Main menu wrapper */
+.nav-controller {
+    text-align: center;
+	position: relative;
+}
+
+/* Common style for all lists */
+.nav-controller ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+}
+
+/* 100% width bar for menu */
+.nav-controller-container {
+    text-align: center;
+
+	position: relative;
+
+}
+
+/* Main menu style */
+.nav-controller .navcon-topmenu {
+	width: 90%;
+	max-width: 69em;
+	margin: 0 auto;
+	padding: 0 1.875em;
+}
+ul.arrowunderline{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    border-bottom:2px solid #9a9a9a;/* enter "left", "right", or "center" to orient the menu accordingly */
+}
+
+ul.arrowunderline li{
+    display:inline;
+    margin-right:25px; /* spacing between each menu item */
+}
+
+ul.arrowunderline li a{
+    position:relative;
+    color:#9a9a9a;
+    padding-bottom:4px; /*spacing between each menu item and arrow underline beneath it */
+    text-decoration:none;
+
+}
+
+
+ul.arrowunderline li a:hover:after{ /* use CSS generated content to add arrow to the menu */
+    content:'';
+    width:0;
+    height:0;
+    position:absolute;
+    left:50%;
+    margin-left:-5px; /* value should match border-width below */
+    bottom: 0;
+    border-width:5px; /* value should match margin-left above */
+    border-style:solid;
+    border-color: transparent transparent #9a9a9a transparent; /* create up arrow */
+}
+/* cbp-style with callbackery */
+/*
+
+.navcon-topmenu > li {
+	margin-left: 4em;
+	display: inline-block;
+}
+
+.navcon-topmenu > li:first-child {
+	margin-left: 0;
+}
+
+*/
+/* Main menu link style *//*
+
+.navcon-topmenu > li > a {
+	color: #fff;
+	font-size: 1.2em;
+	line-height: 3em;
+	display: inline-block;
+	position: relative;
+	z-index: 10000;
+	outline: none;
+}
+
+.no-touch .navcon-topmenu > li > a:hover,
+.no-touch .navcon-topmenu > li > a:focus,
+.navcon-topmenu > li.cbp-hsitem-open > a {
+	color: #02639d;
+}
+
+*/
+/* Add an arrow to the main menu link if it has a submenu (not the only child) *//*
+
+.navcon-topmenu > li > a:not(:only-child):before {
+	display: inline-block;
+	font-family: 'bpmenu';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	content: "\f107";
+	font-size: 80%;
+	margin-right: 0.3em;
+	opacity: 0.4;
+	vertical-align: middle;
+}
+
+.navcon-topmenu > li.cbp-hsitem-open > a:not(:only-child):before {
+	content: "\f106";
+}
+
+*/
+/* Add a triangle to currently open menu item link *//*
+
+.navcon-topmenu > li.cbp-hsitem-open > a:after {
+	top: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: transparent;
+	border-top-color: #47a3da;
+	border-width: 10px;
+	left: 50%;
+	margin-left: -10px;
+}
+*/
+
+/* Submenu style */
+.navcon-sub {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 100%;
+	z-index: 0;
+	text-align: center; /* for aligning the sub items */
+/* Blank div 500px to be filled with shit */
+    min-height: 500px;
+    background: #504f4f;
+    visibility: hidden;
+}
+
+.navcon-sub:before,
+.navcon-sub:after {
+	content: " "; 
+	display: table; 
+}
+.navcon-sub:after {
+	clear: both; 
+}
+
+/* Let's allow 6 item in a row */
+.navcon-sub > li {
+	width: 16.2%;
+	display: inline-block;
+	vertical-align: top;
+	box-shadow: -28px 0 0 -27px #ddd, 0 -28px 0 -27px #ddd;
+	opacity: 0;
+	-webkit-transition: opacity 0.1s 0s;
+	-moz-transition: opacity 0.1s 0s;
+	transition: opacity 0.1s 0s;
+}
+
+/* First 6 items don't have upper box shadow */
+.navcon-sub > li:nth-child(-n+6) {
+	box-shadow: -28px 0 0 -27px #ddd;
+} 
+
+/* Every 7th item does not have a left box shadow */
+.navcon-sub > li:nth-child(6n+1) {
+	box-shadow:  0 -28px 0 -27px #ddd;
+}
+
+/* The first one does not have any box shadow */
+.navcon-sub > li:first-child {
+	box-shadow: none;
+}
+
+.navcon-sub > li a {
+	display: block;
+	text-align: center;
+	color: #a2a2a2;
+	outline: none;
+	padding: 2em 1em 1em 1em;
+}
+
+.no-touch .navcon-sub > li a:hover,
+.no-touch .navcon-sub > li a:focus {
+	color: #888;
+}
+
+.navcon-sub > li a img {
+	border: none;
+	outline: none;
+	display: inline-block;
+	margin: 0;
+	max-width: 100%;
+	-webkit-transition: opacity 0.2s;
+	-moz-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+
+.no-touch .navcon-sub > li a:hover img {
+	opacity: 0.5;
+}
+
+.navcon-sub > li a span {
+	display: block;
+	min-height: 3em;
+	margin-top: 0.4em;
+}
+
+.navcon-topmenu > li.cbp-hsitem-open .navcon-sub {
+	z-index: 1000;
+	visibility: visible;
+}
+
+.navcon-topmenu > li.cbp-hsitem-open .navcon-sub > li {
+	opacity: 1;
+	-webkit-transition: opacity 0.5s 0.1s;
+	-moz-transition: opacity 0.5s 0.1s;
+	transition: opacity 0.5s 0.1s;
+}
+
+/* Helper div for animating the background */
+.navcon-anipop {
+	background: #f7f7f7;
+	position: absolute;
+	width: 100%;
+	top: 100%;
+	left: 0;
+	z-index: 0;
+	height: 0px;
+}
+
+.no-touch .navcon-anipop {
+	-webkit-transition: height 0.3s;
+	-moz-transition: height 0.3s;
+	transition: height 0.3s;
+}
+
+@media screen and (max-width: 65em){
+	.nav-controller {
+		font-size: 80%;
+	}
+}
+
+@media screen and (max-width: 51.4375em){
+	.nav-controller {
+		font-size: 100%;
+	}
+
+	.nav-controller .navcon-topmenu {
+		padding: 0;
+		max-width: none;
+		width: 100%;
+	}
+
+	.navcon-topmenu > li {
+		border-top: 1px solid rgba(255,255,255,0.5);
+		text-align: center;
+		margin: 0 auto;
+		display: block;
+	}
+
+	.navcon-topmenu > li:first-child {
+		border-top: none;
+	}
+
+	.navcon-topmenu > li > a {
+		display: block;
+	}
+
+	.navcon-topmenu > li > a:not(:only-child):before {
+		line-height: 1.8;
+		right: 0;
+		position: absolute;
+		font-size: 200%;
+	}
+
+	.navcon-anipop {
+		display: none;
+	}
+
+	.navcon-sub {
+		background: #f7f7f7;
+		position: relative;
+		overflow: hidden;
+		height: 0;
+	}
+
+	.navcon-topmenu > li.cbp-hsitem-open .navcon-sub {
+		height: auto;
+	}
+
+	/* Let's only allow 3 item in a row now */
+	.navcon-sub > li {
+		width: 30%;
+	}
+
+	/* Reset box shadows for the 6 items in row case */
+	.navcon-sub > li:nth-child(-n+6),
+	.navcon-sub > li:nth-child(6n+1) {
+		box-shadow: -28px 0 0 -27px #ddd, 0 -28px 0 -27px #ddd;
+	}
+
+	/* First 4 items don't have upper box shadow */
+	.navcon-sub > li:nth-child(-n+3) {
+		box-shadow: -28px 0 0 -27px #ddd;
+	} 
+
+	/* Every 5th item does not have a left box shadow */
+	.navcon-sub > li:nth-child(3n+1) {
+		box-shadow:  0 -28px 0 -27px #ddd;
+	}
+
+}
+
+@media screen and (max-width: 25em){
+	/* Let's only allow 1 item in a row now */
+	.navcon-sub > li {
+		width: 100%;
+		display: block;
+	}
+
+	.nav-controller .navcon-sub > li {
+		box-shadow: 0 1px #cecece;
+		text-align: left;
+	}
+
+	.navcon-sub > li a {
+		text-align: left;
+		line-height: 50px;
+		padding: 0.4em 1em;
+	}
+
+	.navcon-sub > li a img {
+		float: left;
+		max-height: 50px;
+	}
+
+	.navcon-sub > li a span {
+		min-height: 0;
+		margin: 0;
+	}
+}

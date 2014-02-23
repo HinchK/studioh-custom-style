@@ -1,0 +1,175 @@
+@charset "UTF-8";
+/**
+ * app.css 												studioh-int.com
+ *
+ * Custom CSS that overrides Foundation CSS.  Otherwise, upgrades within
+ * the Foundation Framework would be a baffling ordeal.
+ *
+ *
+ * Novecentosans fonts licensed from 2014 © MyFonts Inc
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2716862
+ *
+ *
+ */
+@font-face {
+    font-family:"Novecentosans-Light";
+    src: url('../webfonts/2974BE_0_0.eot');
+    src: url('../webfonts/2974BE_0_0.eot?#iefix') format('embedded-opentype'), url('../webfonts/2974BE_0_0.woff') format('woff'), url('../webfonts/2974BE_0_0.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+html,body {
+    height:100%;
+    color: #9a9a9a;
+    font-size: 14px;
+    line-height: 16px;
+    position: relative;
+    margin: 0 0 0 0;
+    font-family:"Novecentosans-Light", Arial, Helvetica, Times, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    /* background: url('../img/hi.png') repeat repeat; */
+}
+#wrapper{
+    width: 1020px;
+    margin: 0 auto;
+    text-align: center;
+    background: #ffffff;
+    padding-top: 45px;
+}
+#content-main {
+    margin-top: 35px;
+
+}
+#nav-big{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+ul.arrowunderline{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    border-bottom:2px solid #9a9a9a;/* enter "left", "right", or "center" to orient the menu accordingly */
+}
+
+ul.arrowunderline li{
+    display:inline;
+    margin-right:25px; /* spacing between each menu item */
+}
+
+ul.arrowunderline li a{
+    position:relative;
+    color:#9a9a9a;
+    padding-bottom:4px; /*spacing between each menu item and arrow underline beneath it */
+    text-decoration:none;
+
+}
+
+
+ul.arrowunderline li a:hover:after{ /* use CSS generated content to add arrow to the menu */
+    content:'';
+    width:0;
+    height:0;
+    position:absolute;
+    left:50%;
+    margin-left:-5px; /* value should match border-width below */
+    bottom: 0;
+    border-width:5px; /* value should match margin-left above */
+    border-style:solid;
+    border-color: transparent transparent #9a9a9a transparent; /* create up arrow */
+}
+
+footer {
+    text-align: center;
+}
+.footydouble {
+    margin-left: 57px;
+    height: 24px;
+    width: 763px;
+    background:url('../img/footydoublehi.png') repeat repeat;
+
+}
+#contact-info {
+    margin:0;
+    margin-left: 46px;
+}
+#image-panel {
+    text-align: center;
+    padding-top: 10px;
+    position: relative;
+}
+#img-front {
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+#image-panel img {
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+.Absolute-Center.is-Responsive {
+    width: 60%;
+    height: 60%;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 40px;
+}
+.Absolute-Center.is-Right {
+    left: auto; right: 20px;
+    text-align: right;
+}
+
+.Absolute-Center.is-Left {
+    right: auto; left: 20px;
+    text-align: left;
+}
+
+.Center-Container {
+    position: relative;
+}
+
+.Absolute-Center {
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+.Absolute-Center.is-Responsive {
+    width: 60%;
+    height: 60%;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 40px;
+}
+.Center-Container {
+    position: relative;
+}
+
+.Absolute-Center {
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.wrapper { float: left; position: relative; left: 50%; }
+.inner { float: left; position: relative; left: -50%; }
+
+h1, h2, h3, h4, h5 {
+    font-family:"Novecentosans-Light", Arial, Helvetica, Times, sans-serif;
+}
+a {
+    color: #9DA575;
+}
+a:hover, a:focus {
+    color: #DFDF1F;
+}
